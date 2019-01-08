@@ -6,7 +6,7 @@
 #include <windows.h>
 #include <assert.h>
 
-struct ipc_data_t
+volatile struct ipc_data_t
 {
 	float val1, val2, result;
 	char op;
