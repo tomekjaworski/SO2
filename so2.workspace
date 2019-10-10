@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="so2" Database="" Version="10.0.0">
+  <Project Name="ncurses-10counters" Path="ncurses-10counters/ncurses-10counters.project" Active="No"/>
+  <Project Name="pdec-mutex" Path="pdec-mutex/pdec-mutex.project" Active="No"/>
+  <Project Name="pdec" Path="pdec/pdec.project" Active="No"/>
+  <Project Name="pcalc" Path="pcalc/pcalc.project" Active="No"/>
+  <Project Name="show-pth" Path="show-pth/show-pth.project" Active="No"/>
+  <Project Name="show-single" Path="show-single/show-single.project" Active="No"/>
+  <Project Name="show-pth2" Path="show-pth2/show-pth2.project" Active="No"/>
+  <Project Name="show-pth3" Path="show-pth3/show-pth3.project" Active="No"/>
+  <Project Name="show-join" Path="show-join/show-join.project" Active="No"/>
+  <Project Name="pcalc2" Path="pcalc2/pcalc2.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="ncurses-10counters" ConfigName="Debug"/>
+      <Project Name="pdec-mutex" ConfigName="Debug"/>
+      <Project Name="pdec" ConfigName="Debug"/>
+      <Project Name="pcalc" ConfigName="Debug"/>
+      <Project Name="show-pth" ConfigName="Debug"/>
+      <Project Name="show-single" ConfigName="Debug"/>
+      <Project Name="show-pth2" ConfigName="Debug"/>
+      <Project Name="show-pth3" ConfigName="Debug"/>
+      <Project Name="show-join" ConfigName="Debug"/>
+      <Project Name="pcalc2" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="ncurses-10counters" ConfigName="Release"/>
+      <Project Name="pdec-mutex" ConfigName="Release"/>
+      <Project Name="pdec" ConfigName="Release"/>
+      <Project Name="pcalc" ConfigName="Release"/>
+      <Project Name="show-pth" ConfigName="Release"/>
+      <Project Name="show-single" ConfigName="Release"/>
+      <Project Name="show-pth2" ConfigName="Release"/>
+      <Project Name="show-pth3" ConfigName="Release"/>
+      <Project Name="show-join" ConfigName="Release"/>
+      <Project Name="pcalc2" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
