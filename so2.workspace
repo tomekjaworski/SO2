@@ -9,7 +9,9 @@
   <Project Name="show-pth2" Path="show-pth2/show-pth2.project" Active="No"/>
   <Project Name="show-pth3" Path="show-pth3/show-pth3.project" Active="No"/>
   <Project Name="show-join" Path="show-join/show-join.project" Active="No"/>
-  <Project Name="pcalc2" Path="pcalc2/pcalc2.project" Active="Yes"/>
+  <Project Name="pcalc2" Path="pcalc2/pcalc2.project" Active="No"/>
+  <Project Name="show-mutex" Path="show-mutex/show-mutex.project" Active="No"/>
+  <Project Name="dll_mutex" Path="dll_mutex/dll_mutex.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -23,6 +25,8 @@
       <Project Name="show-pth3" ConfigName="Debug"/>
       <Project Name="show-join" ConfigName="Debug"/>
       <Project Name="pcalc2" ConfigName="Debug"/>
+      <Project Name="show-mutex" ConfigName="Debug"/>
+      <Project Name="dll_mutex" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -36,6 +40,8 @@
       <Project Name="show-pth3" ConfigName="Release"/>
       <Project Name="show-join" ConfigName="Release"/>
       <Project Name="pcalc2" ConfigName="Release"/>
+      <Project Name="show-mutex" ConfigName="Release"/>
+      <Project Name="dll_mutex" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

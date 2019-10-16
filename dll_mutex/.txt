@@ -1,0 +1,21 @@
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -g -O0 -Wall -I. -I. -MG -MP -MT./Debug/main.c.o -MF./Debug/main.c.o.d -MM main.c 
+/root/Desktop/SO2_Wykłady/dll_mutex/main.c|/root/Desktop/SO2_Wykłady/dll_mutex|/usr/bin/gcc -c /root/Desktop/SO2_Wykłady/dll_mutex/main.c -g -O0 -Wall -o ./Debug/main.c.o -I. -I. 
