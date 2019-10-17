@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <semaphore.h>
 #include <fcntl.h> // stałe O_*
-#include <assert.h>
-#include <sys/stat.h>  
-
 
 int main(void)
 {
-    sem_t* psem = sem_open("MojSemafor2", O_CREAT, 0777, 3);
+    sem_t* psem = sem_open("MojSemafor2", O_CREAT, 0600, 3);
     if (psem == SEM_FAILED) { 
-        perror("sem_unlink");
+        perror("sem_open");
         return 1;
     }
     
