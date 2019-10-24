@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    sem_t* psem = sem_open("MojSemafor2", O_CREAT, 0600, 3);
+    sem_t* psem = sem_open("MojSemafor2", O_CREAT | O_EXCL, 0600, 3);
     if (psem == SEM_FAILED) { 
         perror("sem_open");
         return 1;
