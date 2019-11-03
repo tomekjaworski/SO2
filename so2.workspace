@@ -14,9 +14,10 @@
   <Project Name="dll_mutex" Path="dll_mutex/dll_mutex.project" Active="No"/>
   <Project Name="sem-start" Path="sem-start/sem-start.project" Active="No"/>
   <Project Name="sem-mutex" Path="sem-mutex/sem-mutex.project" Active="No"/>
-  <Project Name="nsem1-create" Path="nsem1-create/nsem1-create.project" Active="Yes"/>
+  <Project Name="nsem1-create" Path="nsem1-create/nsem1-create.project" Active="No"/>
   <Project Name="nsem2-create" Path="nsem2-create/nsem2-create.project" Active="No"/>
   <Project Name="nsem2-open" Path="nsem2-open/nsem2-open.project" Active="No"/>
+  <Project Name="shm1-create" Path="shm1-create/shm1-create.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -38,6 +39,7 @@
       <Project Name="nsem1-create" ConfigName="Debug"/>
       <Project Name="nsem2-create" ConfigName="Debug"/>
       <Project Name="nsem2-open" ConfigName="Debug"/>
+      <Project Name="shm1-create" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -59,6 +61,7 @@
       <Project Name="nsem1-create" ConfigName="Release"/>
       <Project Name="nsem2-create" ConfigName="Release"/>
       <Project Name="nsem2-open" ConfigName="Release"/>
+      <Project Name="shm1-create" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
