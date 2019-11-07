@@ -17,7 +17,9 @@
   <Project Name="nsem1-create" Path="nsem1-create/nsem1-create.project" Active="No"/>
   <Project Name="nsem2-create" Path="nsem2-create/nsem2-create.project" Active="No"/>
   <Project Name="nsem2-open" Path="nsem2-open/nsem2-open.project" Active="No"/>
-  <Project Name="shm1-create" Path="shm1-create/shm1-create.project" Active="Yes"/>
+  <Project Name="shm1-create" Path="shm1-create/shm1-create.project" Active="No"/>
+  <Project Name="shm2-server" Path="shm2-server/shm2-server.project" Active="No"/>
+  <Project Name="shm2-client" Path="shm2-client/shm2-client.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -40,6 +42,8 @@
       <Project Name="nsem2-create" ConfigName="Debug"/>
       <Project Name="nsem2-open" ConfigName="Debug"/>
       <Project Name="shm1-create" ConfigName="Debug"/>
+      <Project Name="shm2-server" ConfigName="Debug"/>
+      <Project Name="shm2-client" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -62,6 +66,8 @@
       <Project Name="nsem2-create" ConfigName="Release"/>
       <Project Name="nsem2-open" ConfigName="Release"/>
       <Project Name="shm1-create" ConfigName="Release"/>
+      <Project Name="shm2-server" ConfigName="Release"/>
+      <Project Name="shm2-client" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
