@@ -22,6 +22,7 @@
   <Project Name="shm2-client" Path="shm2-client/shm2-client.project" Active="No"/>
   <Project Name="shm3-sumator" Path="shm3-sumator/shm3-sumator.project" Active="Yes"/>
   <Project Name="shm3-generator" Path="shm3-generator/shm3-generator.project" Active="No"/>
+  <Project Name="heap_asm" Path="heap_asm/heap_asm.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
