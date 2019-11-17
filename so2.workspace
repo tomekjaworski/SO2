@@ -20,9 +20,12 @@
   <Project Name="shm1-create" Path="shm1-create/shm1-create.project" Active="No"/>
   <Project Name="shm2-server" Path="shm2-server/shm2-server.project" Active="No"/>
   <Project Name="shm2-client" Path="shm2-client/shm2-client.project" Active="No"/>
-  <Project Name="shm3-sumator" Path="shm3-sumator/shm3-sumator.project" Active="Yes"/>
+  <Project Name="shm3-sumator" Path="shm3-sumator/shm3-sumator.project" Active="No"/>
   <Project Name="shm3-generator" Path="shm3-generator/shm3-generator.project" Active="No"/>
-  <Project Name="heap_asm" Path="heap_asm/heap_asm.project" Active="Yes"/>
+  <Project Name="__test_site" Path="__test_site/__test_site.project" Active="No"/>
+  <Project Name="heap_asm" Path="heap_asm/heap_asm.project" Active="No"/>
+  <Project Name="heap_sbrk" Path="heap_sbrk/heap_sbrk.project" Active="No"/>
+  <Project Name="heap_sbrk-sim" Path="heap_sbrk-sim/heap_sbrk-sim.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -49,6 +52,10 @@
       <Project Name="shm2-client" ConfigName="Debug"/>
       <Project Name="shm3-sumator" ConfigName="Debug"/>
       <Project Name="shm3-generator" ConfigName="Debug"/>
+      <Project Name="__test_site" ConfigName="Debug"/>
+      <Project Name="heap_asm" ConfigName="Debug"/>
+      <Project Name="heap_sbrk" ConfigName="Debug"/>
+      <Project Name="heap_sbrk-sim" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -75,6 +82,10 @@
       <Project Name="shm2-client" ConfigName="Release"/>
       <Project Name="shm3-sumator" ConfigName="Release"/>
       <Project Name="shm3-generator" ConfigName="Release"/>
+      <Project Name="__test_site" ConfigName="Release"/>
+      <Project Name="heap_asm" ConfigName="Release"/>
+      <Project Name="heap_sbrk" ConfigName="Release"/>
+      <Project Name="heap_sbrk-sim" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
