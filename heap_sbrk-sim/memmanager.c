@@ -94,20 +94,21 @@ void __attribute__((destructor)) memory_check(void)
 //
 //
 
-
 void* custom_sbrk(intptr_t delta)
 {
-    intptr_t current_brk = mm.brk;
-    if (mm.start_brk + delta < 0) {
-        errno = 0;
-        return (void*)current_brk;
-    }
-    
-    if (mm.brk + delta >= mm.start_mmap) {
-        errno = ENOMEM;
-        return (void*)-1;
-    }
-    
-    mm.brk += delta;
-    return (void*)current_brk;
+  //printf("mm.start_brk=%ld   delta=%ld\n", mm.start_brk, delta);
+
+  intptr_t current_brk = mm.brk;
+  if (mm.brk + delta < mm.start_brk) {
+      errno = 0;
+      return (void*)current_brk;
+  }
+  
+  if (mm.brk + delta >= mm.start_mmap) {
+      errno = ENOMEM;
+      return (void*)-1;
+  }
+  
+  mm.brk += delta;
+  return (void*)current_brk;
 }
