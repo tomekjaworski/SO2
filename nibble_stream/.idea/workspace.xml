@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="nibble_stream" targetName="nibble_stream" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff7f335c-fa37-4e56-a911-3252360c3899" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1jSD2zQouSggAOlSrdd3xixV40b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="settings.editor.selected.configurable" value="Debugger.ObjectiveC" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nibble_stream" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nibble_stream" TARGET_NAME="nibble_stream" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nibble_stream" RUN_TARGET_NAME="nibble_stream">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff7f335c-fa37-4e56-a911-3252360c3899" name="Default Changelist" comment="" />
+      <created>1603788395832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603788395832</updated>
+      <workItem from="1603788397599" duration="7076000" />
+    </task>
+    <task id="LOCAL-00001" summary="Generator tetrad">
+      <created>1603795493859</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603795493859</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Generator tetrad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generator tetrad" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="837" y="216" width="224" height="509" key="#xdebugger.XInspectDialog" timestamp="1603791457629">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state x="837" y="216" width="224" height="509" key="#xdebugger.XInspectDialog/0.0.1902.936@0.0.1902.936" timestamp="1603791457629" />
+    <state x="506" y="39" width="885" height="863" key="CommitChangelistDialog2" timestamp="1603795493575">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state x="506" y="39" width="885" height="863" key="CommitChangelistDialog2/0.0.1902.936@0.0.1902.936" timestamp="1603795493575" />
+    <state x="731" y="299" width="436" height="342" key="ExperimentsDialog" timestamp="1603791651683">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state x="731" y="299" width="436" height="342" key="ExperimentsDialog/0.0.1902.936@0.0.1902.936" timestamp="1603791651683" />
+    <state width="1860" height="298" key="GridCell.Tab.0.bottom" timestamp="1603793925826">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.0.bottom/0.0.1902.936@0.0.1902.936" timestamp="1603793925826" />
+    <state width="1860" height="298" key="GridCell.Tab.0.center" timestamp="1603793925825">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.0.center/0.0.1902.936@0.0.1902.936" timestamp="1603793925825" />
+    <state width="1860" height="298" key="GridCell.Tab.0.left" timestamp="1603793925825">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.0.left/0.0.1902.936@0.0.1902.936" timestamp="1603793925825" />
+    <state width="1860" height="298" key="GridCell.Tab.0.right" timestamp="1603793925826">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.0.right/0.0.1902.936@0.0.1902.936" timestamp="1603793925826" />
+    <state width="1860" height="298" key="GridCell.Tab.1.bottom" timestamp="1603793926711">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.1.bottom/0.0.1902.936@0.0.1902.936" timestamp="1603793926711" />
+    <state width="1860" height="298" key="GridCell.Tab.1.center" timestamp="1603793926711">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.1.center/0.0.1902.936@0.0.1902.936" timestamp="1603793926711" />
+    <state width="1860" height="298" key="GridCell.Tab.1.left" timestamp="1603793926710">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.1.left/0.0.1902.936@0.0.1902.936" timestamp="1603793926710" />
+    <state width="1860" height="298" key="GridCell.Tab.1.right" timestamp="1603793926711">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state width="1860" height="298" key="GridCell.Tab.1.right/0.0.1902.936@0.0.1902.936" timestamp="1603793926711" />
+    <state x="440" y="104" width="1022" height="732" key="SettingsEditor" timestamp="1603791612235">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state x="440" y="104" width="1022" height="732" key="SettingsEditor/0.0.1902.936@0.0.1902.936" timestamp="1603791612235" />
+    <state x="546" y="205" width="806" height="530" key="Vcs.Push.Dialog.v2" timestamp="1603795374869">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state x="546" y="205" width="806" height="530" key="Vcs.Push.Dialog.v2/0.0.1902.936@0.0.1902.936" timestamp="1603795374869" />
+    <state x="614" y="203" width="672" height="678" key="search.everywhere.popup" timestamp="1603791660012">
+      <screen x="0" y="0" width="1902" height="936" />
+    </state>
+    <state x="614" y="203" width="672" height="678" key="search.everywhere.popup/0.0.1902.936@0.0.1902.936" timestamp="1603791660012" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.c</url>
+          <line>102</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
