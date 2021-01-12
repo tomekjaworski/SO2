@@ -16,11 +16,13 @@ void* kota(void*arg) {
 }
 volatile int x;
 int main() {
+    setvbuf(stdout, NULL, _IONBF, 0);
+    
     pthread_t th1, th2, th3;
     pthread_create(&th1, NULL, ala, NULL);
     pthread_create(&th2, NULL, ma, NULL);
     pthread_create(&th3, NULL, kota, NULL);
-    for (x = -1000000; x < 500000; x++) sin(x);
+    for (x = -1000000; x < 500; x++) sin(x);
     printf("start!\n");
     usleep(1000000 * 10); // 10 sekund
     return 0;

@@ -38,7 +38,7 @@ int main(int argc, char **argv)
     
     
     for (int value = -1; value != 0; ) {
-        printf("Wpisz liczbę do zasygnalizowania semafora: ");
+        printf("Wpisz liczbę do zasygnalizowania semafora: \n");
         fflush(stdout);
         scanf("%d", &value);
         for (int i = 0; i < value; i++)

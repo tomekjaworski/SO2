@@ -12,7 +12,7 @@
   <Project Name="pcalc2" Path="pcalc2/pcalc2.project" Active="No"/>
   <Project Name="show-mutex" Path="show-mutex/show-mutex.project" Active="No"/>
   <Project Name="dll_mutex" Path="dll_mutex/dll_mutex.project" Active="No"/>
-  <Project Name="sem-start" Path="sem-start/sem-start.project" Active="No"/>
+  <Project Name="sem-start" Path="sem-start/sem-start.project" Active="Yes"/>
   <Project Name="sem-mutex" Path="sem-mutex/sem-mutex.project" Active="No"/>
   <Project Name="nsem1-create" Path="nsem1-create/nsem1-create.project" Active="No"/>
   <Project Name="nsem2-create" Path="nsem2-create/nsem2-create.project" Active="No"/>
@@ -25,7 +25,7 @@
   <Project Name="__test_site" Path="__test_site/__test_site.project" Active="No"/>
   <Project Name="heap_asm" Path="heap_asm/heap_asm.project" Active="No"/>
   <Project Name="heap_sbrk" Path="heap_sbrk/heap_sbrk.project" Active="No"/>
-  <Project Name="heap_sbrk-sim" Path="heap_sbrk-sim/heap_sbrk-sim.project" Active="Yes"/>
+  <Project Name="heap_sbrk-sim" Path="heap_sbrk-sim/heap_sbrk-sim.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

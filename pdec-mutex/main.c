@@ -27,6 +27,7 @@ int main() {
 	for (int i = 0; i < 10; i++)
 		pthread_join(th[i], NULL);
 	printf("counter=%d\n", counter);
+    usleep(1000*1000);
 	return 0;
 }
 
