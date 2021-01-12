@@ -10,3 +10,5 @@ add_subdirectory("execl2_fork")
 add_subdirectory("execl3_fork_waitpid")
 add_subdirectory("spawn2_wait")
 add_subdirectory("sample_process")
+
+add_subdirectory("fork_sem_shm")
