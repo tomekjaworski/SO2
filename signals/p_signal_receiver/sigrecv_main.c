@@ -9,13 +9,15 @@ void signal_handler_1(int signum) {
 
 void signal_handler_3(int signum, siginfo_t *info, void *ucontext) {
     (void)ucontext,(void)info;
-    printf("signal_handler_3: Otrzymano sygnał %d (%s)\n", signum, strsignal(signum));
+    pid_t sender_pid = info->si_pid;
+    printf("signal_handler_3: Otrzymano sygnał %d (%s) od procesu %d\n", signum, strsignal(signum), sender_pid);
 }
 
 void signal_handler_3a(int signum, siginfo_t *info, void *ucontext) {
     (void)ucontext;
     int sigval = info->si_value.sival_int;
-    printf("signal_handler_3: Otrzymano sygnał %d (%s); sigval=%d\n", signum, strsignal(signum), sigval);
+    pid_t sender_pid = info->si_pid;
+    printf("signal_handler_3: Otrzymano sygnał %d (%s) od procesu %d; sigval=%d\n", signum, strsignal(signum), sender_pid, sigval);
     sleep(1);
     printf("Ok\n");
 }
