@@ -5,6 +5,7 @@
 #include <string.h> // strerro
 #include <limits.h> // PATH_MAX
 #include <sys/wait.h> // waitpid
+#include "../ansi_colors.h"
 
 int main(void) {
     setvbuf(stdout, NULL, _IONBF, 0);
@@ -38,11 +39,13 @@ int main(void) {
         fprintf(stderr, "waitpid: %s (%d)", strerror(errno), errno);
     }
 
+
     printf("SPAWNER: waitpid WEXITSTATUS=%d\n", WEXITSTATUS(status));
     printf("SPAWNER: waitpid WIFEXITED=%d\n", WIFEXITED(status));
     printf("SPAWNER: waitpid WIFSIGNALED=%d\n", WIFSIGNALED(status));
     printf("SPAWNER: waitpid WCOREDUMP=%d\n", WCOREDUMP(status));
     printf("SPAWNER: status=%d; child_pid=%d\n", status, child_pid);
     printf("SPAWNER: koniec\n");
+        return 0;
 }
 

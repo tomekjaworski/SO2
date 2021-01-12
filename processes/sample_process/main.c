@@ -1,6 +1,7 @@
 #include <stdio.h> // setvbuf
 #include <unistd.h> // getpid, getppid
 #include <stdlib.h> // atoi
+#include "../ansi_colors.h"
 
 enum terminate_method_t {
     terminate_normal = 0,
@@ -23,23 +24,23 @@ int main(int argc, const char **argv, const char **envp) {
     enum terminate_method_t term_method = (enum terminate_method_t) atoi(
             argv[5]); // jak zakończyć proces? 0=normalnie, 1=SEGV
 
-    printf("SAMPLE: getpid()=%d, getppid()=%d\n", getpid(), getppid());
+    printf(ANSI_FG_RED "SAMPLE: getpid()=%d, getppid()=%d\n" ANSI_RESET, getpid(), getppid());
 
-    printf("SAMPLE: argc=%d\n", argc);
+    printf(ANSI_FG_GREEN "SAMPLE: argc=%d\n" ANSI_RESET, argc);
     for (int i = 0; i < argc && show_argv; i++) {
-        printf("SAMPLE: argv[%d]='%s'\n", i, argv[i]);
+        printf(ANSI_FG_GREEN "SAMPLE: argv[%d]='%s'\n" ANSI_RESET, i, argv[i]);
     }
 
     for (int i = 0; envp[i] != NULL && show_envp; i++) {
-        printf("SAMPLE: envp[%d]='%s'\n", i, envp[i]);
+        printf(ANSI_FG_GREEN "SAMPLE: envp[%d]='%s'\n ANSI_RESET", i, envp[i]);
     }
 
     for (int i = 0; i < time; i++) {
-        printf(".");
+        printf(ANSI_FG_GREEN "." ANSI_RESET);
         sleep(1);
     }
 
-    printf("SAMPLE: getpid()=%d - KONIEC\n", getpid());
+    printf(ANSI_FG_RED "SAMPLE: getpid()=%d - KONIEC\n" ANSI_RESET, getpid());
     if (term_method == terminate_segv) {
         volatile int dummy = *(volatile int*)(NULL);
         (void)dummy;
