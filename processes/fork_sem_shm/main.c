@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
     setvbuf(stdout, NULL, _IONBF, 0);
     printf("START: Mój PID: %d, PID rodzica %d:\n", getpid(), getppid());
 
+
     // przygotuj pamięć współdzieloną
 
     int fd = shm_open("__common_data", O_CREAT | O_RDWR | O_TRUNC, 0666);
