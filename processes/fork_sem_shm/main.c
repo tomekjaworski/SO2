@@ -1,12 +1,17 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include <semaphore.h>
 #include <sys/mman.h> // shm_open
-#include <sys/wait.h>
+#include <sys/wait.h> // waitpid
+#include <fcntl.h> // O_*
 
+
+#define COUNT_MAX   32
 struct memory_board_t {
 
-    float values[32];
+    float values[COUNT_MAX];
     int count;
 
     float sum;
@@ -16,11 +21,12 @@ struct memory_board_t {
     sem_t job_reply;
     int terminate;
 };
+
 void run_calc_process(struct memory_board_t*);
 
-#include <fcntl.h> // O_*
 
 int main(int argc, char *argv[]) {
+    srand(time(NULL));
     setvbuf(stdout, NULL, _IONBF, 0);
     printf("START: Mój PID: %d, PID rodzica %d:\n", getpid(), getppid());
 
@@ -55,23 +61,35 @@ int main(int argc, char *argv[]) {
     pid_t fork_pid = fork();
 
     if (fork_pid == 0) {
+        // tutaj działa proces potomny
         run_calc_process(pmem);
         return 0;
     }
 
-    sleep(5);
-    pmem->terminate= 1;
-    sem_post(&pmem->job_request);
+    // tutaj działa proces rodzic
+    pmem->count = rand() % COUNT_MAX;
+    float sum = 0;
+    for (int i = 0; i < pmem->count; i++)
+        sum += pmem->values[i] = rand() % 100;
 
+    printf("RODZIC: suma=%f; średnia=%f\n", sum, sum / (float)pmem->count);
+    printf("POTOMEK: suma=%f; średnia=%f (PRZED URUCHOMIENIEM)\n", pmem->sum, pmem->mean);
+    sem_post(&pmem->job_request);
+    sem_wait(&pmem->job_reply);
+    printf("POTOMEK: suma=%f; średnia=%f (PO URUCHOMIENIU)\n", pmem->sum, pmem->mean);
+
+    // zakończenie potomka
+    sleep(1);
+    pmem->terminate = 1;
+    sem_post(&pmem->job_request);
     waitpid(fork_pid, NULL, 0);
 
-    printf("Koniec procesu (getpid=%d)\n", getpid());
+    printf("RODZIC: Koniec procesu (getpid=%d)\n", getpid());
     return 0;
 }
 
 void run_calc_process(struct memory_board_t* pmem) {
     printf("run_calc_process: START, getpid()=%d, getppid()=%d\n", getpid(), getppid());
-
     while(1) {
         sem_wait(&pmem->job_request);
         if (pmem->terminate)

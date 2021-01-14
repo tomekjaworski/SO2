@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 3.17)
 get_filename_component(proj_name ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 project(${proj_name} C)
 
-add_compile_options("-pedantic" "-Werror" "-Wall" "-Wextra" "-fmax-errors=5" "-Werror=vla"
+add_compile_options(
+        "-pedantic" "-Werror" "-Wall" "-Wextra" "-fmax-errors=5" "-Werror=vla"
         "-Wno-error=unused-parameter"
         "-Wno-error=implicit-fallthrough"
         "-Wno-error=parentheses"
