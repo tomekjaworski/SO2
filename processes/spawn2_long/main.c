@@ -13,29 +13,18 @@ int main(void) {
     printf("SPAWNER: getpid()=%d; getppid()=%d\n", getpid(), getppid());
     printf("SPAWNER: getcwd()='%s'\n", buffer);
 
-#if 0
-    char* path = "/bin/date";
-    char* const argv[] = {
-        path,
-        "+%H:%M:%S %d/%m/%Y",
-        NULL
-    };
-#endif
-
-#if 1
     char* path = "./../sample_process/sample_process";
     char* const argv[] = {
-        path, // niepoprawny format ścieżki(!)
-        "5", "42", "1", "0", "0",
-        NULL
+            path, // niepoprawny format ścieżki(!)
+            "5", "42", "1", "0", "0",
+            NULL
     };
-#endif
 
     int status = posix_spawn(&child_pid, path,
-                         NULL,
-                         NULL,
-                         argv,
-                         environ);
+                             NULL,
+                             NULL,
+                             argv,
+                             environ);
 
     if (status != 0) {
         fprintf(stderr, "posix_spawn: %s (%d)", strerror(errno), errno);
