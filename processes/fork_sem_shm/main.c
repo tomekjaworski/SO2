@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
     }
 
     struct memory_board_t *pmem = mmap(NULL, sizeof(struct memory_board_t), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    //struct memory_board_t *pmem = malloc(sizeof(struct memory_board_t));
     if (pmem == NULL) {
         perror("mmap");
         return -1;
@@ -85,6 +86,20 @@ int main(int argc, char *argv[]) {
     waitpid(fork_pid, NULL, 0);
 
     printf("RODZIC: Koniec procesu (getpid=%d)\n", getpid());
+
+    sem_destroy(&pmem->job_request);
+    sem_destroy(&pmem->job_reply);
+
+    if (munmap(pmem, sizeof(struct memory_board_t)) != 0) {
+        perror("munmap");
+        return -1;
+    }
+
+    if (shm_unlink("__common_data") != 0) {
+        perror("shm_unlink");
+        return -1;
+    }
+
     return 0;
 }
 
