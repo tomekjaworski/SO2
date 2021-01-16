@@ -1,20 +1,22 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <stdio.h>
-#include <math.h>
+
 void* ala(void*arg) {
 	printf(" Ala ");
     return NULL;
 }
+
 void* ma(void*arg) {
 	printf(" ma ");
     return NULL;
 }
+
 void* kota(void*arg) {
 	printf(" kota ");
     return NULL;
 }
-volatile int x;
+
 int main() {
     setvbuf(stdout, NULL, _IONBF, 0);
     for (int i = 0; i < 100; i++)

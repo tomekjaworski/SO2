@@ -34,7 +34,8 @@ int main() {
 		pthread_join(th[i], NULL);
 	printf("counter=%d\n", counter);
     //pthread_mutex_destroy(&mutex);
-    sem_close(&semafor);
+
+    sem_destroy(&semafor);
 	return 0;
 }
 

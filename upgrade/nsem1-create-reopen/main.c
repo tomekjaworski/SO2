@@ -2,9 +2,9 @@
 #include <semaphore.h>
 #include <fcntl.h> // stałe O_*
 
-int main(void)
-{
-    sem_t* psem = sem_open("MojSemafor2", O_CREAT | O_EXCL, 0600, 3);
+int main(void) {
+
+    sem_t* psem = sem_open("MojSemafor2", O_CREAT /*| O_EXCL*/, 0600, 3);
     if (psem == SEM_FAILED) { 
         perror("sem_open");
         return 1;
@@ -14,7 +14,7 @@ int main(void)
     sem_getvalue(psem, &counter);
     printf("counter=%d\n", counter);
 
-    sem_post(psem);
+    sem_post(psem); // +1
     
     sem_getvalue(psem, &counter);
     printf("counter=%d\n", counter);

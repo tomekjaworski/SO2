@@ -8,16 +8,16 @@ int main(void) {
     asm("mov rax, 0xAAAAAAAAAAAAAAAA");
     asm("push rax"); // - 8
     asm("nop");
-    asm("mov eax, 0xBBBBBBBB");
-    asm("push eax"); // - 8
+    asm("mov ax, 0xBBBB");
+    asm("push ax"); // - 8
     asm("nop");
-    asm("mov ax, 0xCCCC");
-    asm("push ax"); // - 2
+    asm("mov rax, 0xCCCCCCCCCCCCCCCC");
+    asm("push rax"); // - 2
     asm("nop");
-    asm("mov al, 0xDD");
-    asm("push al"); // - 8
+    asm("mov ax, 0xDDDD");
+    asm("push ax"); // - 8
     asm("nop");
-    asm("add rsp, 8 + 4 + 2 + 1");
+    asm("add rsp, 8 + 2 + 8 + 2");
     asm(".att_syntax prefix");
 
     return 0;

@@ -20,12 +20,12 @@ void* routine(void*arg) {
         sem_wait(&semafor);
         if (terminate)
             break;
+        pinfo->counter++;
         printf("ID=%d; counter=%d START\n", pinfo->id, pinfo->counter);
         usleep(5 * 1000000); // jakieś zadanie
         printf("ID=%d; counter=%d STOP\n", pinfo->id, pinfo->counter);
-        pinfo->counter++;
     }
-    //printf("ID=%d; counter=%d (KONIEC)\n", pinfo->id, pinfo->counter);
+    printf("ID=%d; counter=%d (KONIEC)\n", pinfo->id, pinfo->counter);
     return NULL;
 }
 
@@ -38,9 +38,6 @@ int main(int argc, char **argv)
     pthread_t th[4];
     for (int i = 0; i < 4; i++)
         pthread_create(th + i, NULL, routine, infos + i);
-
-
-    
     for (int value = -1; value != 0; ) {
         printf("Wpisz liczbę do zasygnalizowania semafora: \n");
         fflush(stdout);
@@ -57,7 +54,6 @@ int main(int argc, char **argv)
             
     for (int i = 0; i < 4; i++)
         pthread_join(th[i], NULL);
-
 
     sem_destroy(&semafor);
 	return 0;
