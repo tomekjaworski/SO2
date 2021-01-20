@@ -18,3 +18,21 @@ add_subdirectory(sem-mutex)
 
 add_subdirectory(nsem1-create-exclusive)
 add_subdirectory(nsem1-create-reopen)
+
+
+# -------------
+
+add_subdirectory(shm1-create)
+add_subdirectory(shm1-SegVOnWrite)
+add_subdirectory(shm1-PROT_EXEC)
+
+add_subdirectory(shm2-client)
+add_subdirectory(shm2-server)
+
+add_subdirectory(shm2a-client)
+add_subdirectory(shm2a-server)
+
+add_subdirectory(shm3-generator)
+add_subdirectory(shm3-sumator)
+
+add_subdirectory(_sandbox)

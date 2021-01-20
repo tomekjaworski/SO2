@@ -1,9 +1,5 @@
-
 #include "common.h"
-
-int main(int argc, char **argv)
-{
-
+int main(int argc, char **argv) {
     int fd = shm_open("/sum_data", O_CREAT | O_RDWR, 0600);
     err(fd == -1, "shm_open");
     

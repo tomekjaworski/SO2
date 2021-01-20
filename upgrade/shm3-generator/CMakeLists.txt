@@ -11,5 +11,5 @@ add_compile_options("-pedantic" "-Werror" "-Wall" "-Wextra" "-fmax-errors=5" "-W
         "-Wno-unused-parameter"
         "-D_GNU_SOURCE" "-D_TEST_BOOTSTRAP" "-DINSIDE_DANTE")
 
-add_executable(${proj_name}  main.c)
+add_executable(${proj_name}  shm3gen.c)
 target_link_libraries(${proj_name} m pthread rt)

@@ -9,28 +9,30 @@ sem_t semafor;
 
 struct task_t {
     int id;
-    int counter;
-} infos[] = {{1},{2},{3},{4}};
+    int cnt; // licznik
+} infos[] = {{.id=1, .cnt=0},
+             {.id=2, .cnt=0},
+             {.id=3, .cnt=0},
+             {.id=4, .cnt=0}};
 int terminate;
 
-void* routine(void*arg) {
-    struct task_t* pinfo = (struct task_t*)arg;
-    
-    while(1) {
+void *routine(void *arg) {
+    struct task_t *pinfo = (struct task_t *) arg;
+
+    while (1) {
         sem_wait(&semafor);
         if (terminate)
             break;
-        pinfo->counter++;
-        printf("ID=%d; counter=%d START\n", pinfo->id, pinfo->counter);
+        pinfo->cnt++;
+        printf("ID=%d; counter=%d START\n", pinfo->id, pinfo->cnt);
         usleep(5 * 1000000); // jakieś zadanie
-        printf("ID=%d; counter=%d STOP\n", pinfo->id, pinfo->counter);
+        printf("ID=%d; counter=%d STOP\n", pinfo->id, pinfo->cnt);
     }
-    printf("ID=%d; counter=%d (KONIEC)\n", pinfo->id, pinfo->counter);
+    printf("ID=%d; counter=%d (KONIEC)\n", pinfo->id, pinfo->cnt);
     return NULL;
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     int hsem = sem_init(&semafor, 0 /*false*/, 0);
     assert(hsem == 0);
 
@@ -38,7 +40,7 @@ int main(int argc, char **argv)
     pthread_t th[4];
     for (int i = 0; i < 4; i++)
         pthread_create(th + i, NULL, routine, infos + i);
-    for (int value = -1; value != 0; ) {
+    for (int value = -1; value != 0;) {
         printf("Wpisz liczbę do zasygnalizowania semafora: \n");
         fflush(stdout);
         scanf("%d", &value);
@@ -51,10 +53,10 @@ int main(int argc, char **argv)
     terminate = 1;
     for (int i = 0; i < 4; i++)
         sem_post(&semafor);
-            
+
     for (int i = 0; i < 4; i++)
         pthread_join(th[i], NULL);
 
     sem_destroy(&semafor);
-	return 0;
+    return 0;
 }
