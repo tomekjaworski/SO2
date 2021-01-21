@@ -2,74 +2,60 @@
 #include <unistd.h>
 #include <string.h> // strsignal
 #include <signal.h> // sigaction, struct sigaction
+#include <pthread.h>
 
-void signal_handler_1(int signum) {
-    printf("signal_handler_1: Otrzymano sygnał %d (%s)\n", signum, strsignal(signum));
-}
 
-void signal_handler_3(int signum, siginfo_t *info, void *ucontext) {
-    (void)ucontext,(void)info;
-    pid_t sender_pid = info->si_pid;
-    printf("signal_handler_3: Otrzymano sygnał %d (%s) od procesu %d\n", signum, strsignal(signum), sender_pid);
-}
-
-void signal_handler_3a(int signum, siginfo_t *info, void *ucontext) {
+void signal_handler(int signum, siginfo_t *info, void *ucontext) {
     (void)ucontext;
     int sigval = info->si_value.sival_int;
     pid_t sender_pid = info->si_pid;
-    printf("signal_handler_3: Otrzymano sygnał %d (%s) od procesu %d; sigval=%d\n", signum, strsignal(signum), sender_pid, sigval);
-    sleep(1);
-    printf("Ok\n");
+    printf("signal_handler: Otrzymano sygnał %d (%s) od procesu %d; sigval=%d\n", signum, strsignal(signum), sender_pid, sigval);
+    printf("signal_handler: pthread_self = %d\n", (int)pthread_self() % 1000);
+    sleep(5);
+    printf("signal_handler: koniec\n");
 }
 //
+
+void* thread_routine(void* dummy) {
+    int ch = (int)(intptr_t)dummy;
+    (void)ch;
+    printf("thread_routine: pthread_self = %d\n", (int)pthread_self() % 1000);
+    while(1) {
+        usleep(500 * 1000);
+        //printf("%c", ch);
+    }
+    return NULL;
+}
+
 int main(int argc, const char** argv) {
     (void)argc;
     setvbuf(stdout, NULL, _IONBF, 0);
 
-    printf("argv[0]=%s\n", argv[0]);
     printf("Mój PID: %d\n", getpid());
 
+    pthread_t table[10];
+    for (int i = 0; i < 10; i++)
+        pthread_create(table + i, NULL, thread_routine, (void*)((intptr_t)'A' + i));
+
+    sleep(2); // poczekaj na start wątków...
+
     struct sigaction new, old;
-#if 0
-    new.sa_handler = signal_handler_1;
-    if (sigaction(SIGINT, &new, &old) != 0) {
-        perror("sigaction"); // wyświetl errno jako tekst
-        return -1;
-    }
-#endif
-#if 0
-    new.sa_handler = signal_handler_1;
-    if (sigaction(SIGINT, &new, &old) != 0 || sigaction(SIGALRM, &new, &old) != 0) {
-        perror("sigaction"); // wyświetl errno jako tekst
-        return -1;
-    }
-#endif
-#if 1
     memset(&new, 0, sizeof(struct sigaction));
     sigemptyset(&new.sa_mask);
     new.sa_flags = SA_SIGINFO;
-    new.sa_sigaction = signal_handler_3a;
+    new.sa_sigaction = signal_handler;
 
     if (sigaction(SIGINT, &new, &old) != 0) {
         perror("sigaction"); // wyświetl errno jako tekst
         return -1;
     }
-#if 0
-    if (sigaction(SIGSEGV, &new, &old) != 0) {
-        perror("sigaction"); // wyświetl errno jako tekst
-        return -1;
-    }
-#endif
-#endif
 
+    printf("main: pthread_self = %d\n", (int)pthread_self() % 1000);
 
-    for (int i = 0;; i++) {
+    printf("Czekam na SIGINT...\n");
+    while(1) {
+        sleep(10);
         printf(".");
-        if (i && !(i % 100)) {
-            printf("\n");
-            //*(volatile char*)(NULL) = 10;
-        }
-        usleep(500 * 1000);
     }
 
     return 0;

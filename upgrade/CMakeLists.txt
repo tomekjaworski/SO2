@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(my_solution)
+project(upgrade)
 
 
 add_subdirectory(dll_mutex)

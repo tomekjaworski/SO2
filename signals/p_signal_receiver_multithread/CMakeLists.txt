@@ -7,4 +7,4 @@ add_compile_options("-pedantic" "-Werror" "-Wall" "-Wextra" "-fmax-errors=5" "-W
 
 
 add_executable(${proj_name} sigrecv_main.c)
-target_link_libraries(${proj_name}  m)
+target_link_libraries(${proj_name} m rt pthread)
