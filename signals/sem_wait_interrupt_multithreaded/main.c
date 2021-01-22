@@ -60,13 +60,14 @@ void* thread_routine(void* arg) {
 int main(void) {
     setvbuf(stdout, NULL, _IONBF, 0);
     printf("Mój PID=%d\n", getpid());
-    printf("Polecenie testowe: kill -INT %d", getpid());
+    printf("Polecenie testowe: kill -INT %d\n", getpid());
 
     // ustaw obsługe sygnału INT
     struct sigaction new, old;
     memset(&new, 0, sizeof(struct sigaction));
     sigemptyset(&new.sa_mask);
     new.sa_flags = SA_SIGINFO;
+    new.sa_flags |= SA_RESTART;  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx sem_wait nie zostanie przerwany
     new.sa_sigaction = handler;
     if (sigaction(SIGINT, &new, &old) != 0)
         show_error(1, "sigaction");
