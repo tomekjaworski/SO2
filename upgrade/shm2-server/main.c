@@ -13,6 +13,7 @@ int main(int argc, char **argv)
     err(pdata == NULL, "mmap");
     
     sem_init(&pdata->cs, 1, 1); // shared, signaled
+    printf("Mój PID=%d\n", getpid());
     printf("Gotowe, czekam na klienta; pdata=%p...\n", (void*)pdata);
     
     int terminate = 0, counter = 0;
