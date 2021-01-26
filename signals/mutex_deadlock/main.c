@@ -6,7 +6,8 @@
 #include <errno.h> // erno
 #include <string.h> // strsignal
 
-pthread_mutex_t global_mutex = PTHREAD_MUTEX_INITIALIZER;
+//pthread_mutex_t global_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t global_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
 
 void signal_hander(int signum, siginfo_t *siginfo, void * context) {
     (void)context, (void)siginfo;
