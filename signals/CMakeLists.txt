@@ -16,3 +16,5 @@ add_subdirectory("p_signal_sender_kill")
 
 add_subdirectory("sem_wait_interrupt_singlethread")
 add_subdirectory("sem_wait_interrupt_multithreaded")
+
+add_subdirectory("mutex_deadlock")
