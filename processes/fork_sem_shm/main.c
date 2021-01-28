@@ -122,3 +122,4 @@ void run_calc_process(struct memory_board_t* pmem) {
     }
     printf("run_calc_process: KONIEC\n");
 }
+

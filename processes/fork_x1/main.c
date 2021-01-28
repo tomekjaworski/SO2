@@ -4,13 +4,13 @@
 int main(int argc, char *argv[]) {
     setvbuf(stdout, NULL, _IONBF, 0);
 
+    fork();
+
     pid_t my_pid = getpid();
     pid_t parent_pid = getppid();
     printf("Mój PID: %d, PID rodzica: %d\n", my_pid, parent_pid);
 
-    printf("Wpisz 'ps -ax  | grep ppid`\n");
-    printf("Wciśnij dowolny klawisz...");
-    getchar();
+    sleep(1);
     return 0;
 }
 

@@ -17,4 +17,6 @@ add_subdirectory("sample_process")
 add_subdirectory("fork_sem_shm")
 
 
-add_subdirectory("fork_bomb")
+add_subdirectory("fork_x1")
+add_subdirectory("fork_x2")
+add_subdirectory("fork_x3")
